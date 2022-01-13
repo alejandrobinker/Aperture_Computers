@@ -3,18 +3,26 @@ class Carrito {
         this.productos = JSON.parse(localStorage.getItem('carrito')) || []
     }
     agregar(producto) {
-        this.productos.push(producto)
+        let item = this.productos.find(element => element.producto.id === producto.id)
+        if (item) {
+            item.cantidad++
+        } else {
+            this.productos.push({ producto, cantidad: 1 })
+        }
         localStorage.setItem('carrito', JSON.stringify(this.productos))
     }
-    sacar(nombreProducto) {
-        let nombresProductos = this.productos.map(unProducto => unProducto.nombre)
-        let posicion = nombresProductos.indexOf(nombreProducto)
-        console.log(posicion)
+    sacar(id) {
+        let item = this.productos.find(element => element.id === id)
+        let posicion = nombresProductos.indexOf(item)
         this.productos.splice(posicion, 1)
         localStorage.setItem('carrito', JSON.stringify(this.productos))
     }
     cantidad() {
-       return this.productos.length
+        let badgeCounter = 0
+        for (const item of this.productos) {
+            badgeCounter += item.cantidad
+        }
+        return badgeCounter
     }
 }
 

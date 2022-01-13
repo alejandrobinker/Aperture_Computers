@@ -25,22 +25,19 @@ function render(item) {
         </div>
         
     </div>`
-    document.getElementById('productos-container').appendChild(card)
+    $('#productos-container').append(card)
 }
 
 
 function inicializarAgregarAlCarrito(producto) {
-    let badge = document.getElementById('badge-counter')
-    let boton = document.getElementById(`producto-${producto.id}`)
-    boton.addEventListener('click', () => {
+    $(`#producto-${producto.id}`).on('click', () => {
         carrito.agregar(producto)
-        badge.innerHTML = carrito.cantidad()
+        $('#badge-counter').html(carrito.cantidad())
     })
 }
 
 function badgeNumber() {
-    let badge = document.getElementById('badge-counter')
-    badge.innerHTML = carrito.cantidad()
+    $('#badge-counter').html(carrito.cantidad())
 }
 
 badgeNumber()
