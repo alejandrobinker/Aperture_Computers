@@ -12,9 +12,13 @@ badgeNumber()
 
 let comprar = document.getElementById("finalizar-compra")
 comprar.onclick = () => {
-    alert("Compra finalizada!")
-    localStorage.clear()
-    let producto = document.getElementById('tbody')
-    producto.innerHTML = ""
-    location.reload()
+    if (carrito.productos.length !== 0) {
+        alert("Compra finalizada!")
+        localStorage.clear()
+        let producto = document.getElementById('tbody')
+        producto.innerHTML = ""
+        location.reload()
+    } else {
+        alert("Agregá productos en la tienda")
+    }
 }
