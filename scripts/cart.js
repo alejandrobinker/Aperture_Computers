@@ -12,9 +12,13 @@ class Carrito {
         localStorage.setItem('carrito', JSON.stringify(this.productos))
     }
     sacar(id) {
-        let item = this.productos.find(element => element.id === id)
-        let posicion = nombresProductos.indexOf(item)
-        this.productos.splice(posicion, 1)
+        let item = this.productos.find(element => element.producto.id === id)
+        let posicion = this.productos.indexOf(item)
+        if (item.cantidad > 1) {
+            item.cantidad--
+        } else {
+            this.productos.splice(posicion, 1)
+        }
         localStorage.setItem('carrito', JSON.stringify(this.productos))
     }
     cantidad() {
@@ -26,4 +30,5 @@ class Carrito {
     }
 }
 
-const carrito = new Carrito()
+export const carrito = new Carrito()
+
