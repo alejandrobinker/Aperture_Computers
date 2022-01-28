@@ -88,21 +88,27 @@ main {
 }
 
 .carousel-container {
-    padding: 10rem 20rem 0 20rem;
+    width: 75%;
+    margin: auto;
+}
+
+@media (min-width: 992px) {
+    .carousel-container {
+        padding-top: 10rem;
+    }
 }
 
 .footer-nav {
-    margin-top: 1rem;
-}
-
-.footer-nav ul {
-    text-align: center;
-    padding-left: 0;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-nav-item {
     list-style: none;
     padding-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .footer-nav-link {
@@ -112,11 +118,6 @@ main {
 
 .footer-nav-link:hover {
     color: white;
-}
-
-.footer-redes {
-    text-align: center;
-    margin-bottom: 1rem;
 }
 
 .icon-white {
@@ -138,10 +139,6 @@ main {
 }
 
 /*PRODUCTOS*/
-.main-productos {
-    padding-left: 35rem;
-    padding-right: 35rem;
-}
 
 .productos-container-bounds {
     padding-top: 7rem;
@@ -167,8 +164,6 @@ main {
 
 /*CARRITO*/
 .main-carrito {
-    padding-left: 35rem;
-    padding-right: 35rem;
     padding-bottom: 30rem;
 }
 
@@ -197,4 +192,8 @@ input {
     width: 10%;
     font-size: 20px;
     vertical-align: top;
+}
+
+td, th {
+    white-space: nowrap;
 }
