@@ -197,3 +197,22 @@ input {
 td, th {
     white-space: nowrap;
 }
+
+/*NOSOTROS*/
+
+.main-nosotros {
+    height: 40rem;
+    background: linear-gradient(rgba(8, 8, 8, 0.5), rgba(17, 17, 17, 0.582)), url(../img/local.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 30px;
+}
+
+/*CONTACTO*/
+
+.contacto {
+    color: white;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+}
