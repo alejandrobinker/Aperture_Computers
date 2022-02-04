@@ -15,8 +15,8 @@ comprar.onclick = () => {
     if (carrito.productos.length !== 0) {
         alert("Compra finalizada!")
         localStorage.clear()
-        let producto = document.getElementById('tbody')
-        producto.innerHTML = ""
+        let tbody = document.getElementById('tbody')
+        tbody.innerHTML = ""
         location.reload()
     } else {
         alert("Agregá productos en la tienda")
