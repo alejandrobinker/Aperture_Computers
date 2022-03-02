@@ -6,7 +6,7 @@ Made with: HTML5 CSS3 JavaScript JQuery
 
 Frameworks: Bootstrap 5
 
-##In the project directory, you can run:
+## In the project directory, you can run:
 
 ### `npm install`
 
